@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/bg-masthead.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+header .hover {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(92, 77, 66, 0.5);
+}
+header .container .header-container {
+  z-index: 2;
+}
+header .container .header-container nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-family: "Merriweather Sans", sans-serif;
+}
+header .container .header-container nav .logo {
+  font-size: 25px;
+  font-weight: 700;
+}
+header .container .header-container nav .hamburger {
+  font-size: 25px;
+
+  display: none;
+}
+
+header .container .header-container nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+header .container .header-container .header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Merriweather Sans", sans-serif;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  height: 85vh;
+  text-align: center;
+}
+header .container .header-container .header-content .header-title {
+  font-size: 3.5rem;
+  color: white !important;
+}
+
+header .container .header-container .header-content .header-line {
+  width: 70px;
+  height: 3px;
+  background-color: #f4623a;
+}
+
+header .container .header-container .header-content .header-text {
+  font-size: 1.15rem;
+  line-height: 30px;
+}
+
+header .container .header-container .header-content .header-btn {
+  padding: 1.25rem 2.25rem;
+  background-color: #f4623a;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+header .container .header-container .header-content .header-btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 992px) {
+  header .container .header-container nav ul {
+    display: none;
+  }
+  header .container .header-container nav .hamburger {
+    display: block;
+  }
+  header .container .header-container .header-content .header-title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  header .container .header-container .header-content .header-title {
+    font-size: 2rem;
+  }
+  header .container .header-container .header-content .header-btn {
+    padding: 1rem 1.5rem;
+  }
+  header .container .header-container .header-content {
+    gap: 20px;
+  }
+}
+/* about started*/
+
+#about {
+  /* height: 70vh; */
+  width: 100%;
+  background-color: #f4623a;
+}
+#about .about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+  color: white;
+  font-family: "Merriweather Sans", sans-serif;
+}
+#about .about-container h2 {
+  font-size: 28px;
+  line-height: 45px;
+}
+#about .about-container .about-line {
+  border: 2px solid white;
+  width: 60px;
+}
+#about .about-container p {
+  width: 750px;
+  line-height: 25px;
+  font-size: 18px;
+}
+#about .about-container .about-btn {
+  padding: 25px 30px;
+  border-radius: 40px;
+  font-size: 16px;
+  border: none;
+  font-weight: 700;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+@media screen and (max-width: 920px) {
+  #about .about-container p {
+    width: 500px;
+    font-size: 16px;
+  }
+  #about .about-container .about-btn {
+    padding: 20px 25px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 568px) {
+  #about .about-container {
+    gap: 20px;
+    padding: 80px 0;
+  }
+  #about .about-container p {
+    width: 350px;
+  }
+  #about .about-container .about-btn {
+    padding: 20px 25px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #about .about-container h2 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+  #about .about-container p {
+    width: 300px;
+    font-size: 14px;
+  }
+}
+/* about end*/
+/* services started */
+#services .services-container {
+  padding: 90px 0;
+  text-align: center;
+}
+#services .services-container h2 {
+  font-size: 32px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 400;
+}
+#services .services-container .service-line {
+  width: 70px;
+  height: 3px;
+  background-color: #f4623a;
+  margin: 25px auto;
+}
+#services .services-container .card-box {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+}
+#services .services-container .card-box .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 220px;
+}
+#services .services-container .card-box .card .icon {
+  color: #f4623a;
+  font-size: 46px;
+}
+#services .services-container .card-box .card .card-title h2 {
+  font-size: 25px;
+}
+#services .services-container .card-box .card .card-text p {
+  color: #6c757d !important;
+  font-size: 22px;
+  width: 250px;
+}
+
+@media screen and (max-width: 1200px) {
+  #services .services-container .card-box {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #services .services-container .card-box {
+    grid-template-columns: auto;
+  }
+  #services .services-container h2 {
+    font-size: 26px;
+  }
+  #services .services-container .card-box .card .card-title h2 {
+    font-size: 22px;
+  }
+  #services .services-container .card-box .card .icon {
+    font-size: 40px;
+  }
+}
+/* services end */
+
+/* image-section start */
+
+#image-section {
+  width: 100%;
+}
+#image-section .image-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#image-section .image-container .card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#image-section .image-container .card img {
+  width: 100%;
+  height: 100%;
+}
+#image-section .image-container .card .hover {
+  opacity: 0;
+  background-color: rgba(243, 98, 57, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  top: 0;
+  left: 0;
+}
+#image-section .image-container .card .hover h4 {
+  color: #ced4da;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+#image-section .image-container .card .hover h3 {
+  font-size: 20px;
+  color: white;
+}
+#image-section .image-container .card:hover .hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+  #image-section .image-container {
+    grid-template-columns: auto auto;
+  }
+  #image-section .image-container .card .hover h3 {
+    font-size: 16px;
+  }
+  #image-section .image-container .card .hover h4 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #image-section .image-container {
+    grid-template-columns: auto;
+  }
+}
+/* image section end */
+
+#download {
+  background-color: #212529;
+  padding: 200px 0;
+}
+#download .download-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Merriweather Sans", sans-serif;
+  text-align: center;
+}
+#download .download-container h2 {
+  font-size: 38px;
+  font-weight: 400;
+}
+#download .download-container .download-btn {
+  padding: 25px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 40px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+#download .download-container .download-btn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 568px) {
+  #download .download-container h2 {
+    font-size: 28px;
+  }
+}
+
+#contact .contact-container {
+  padding: 100px 0;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Merriweather Sans", sans-serif;
+}
+#contact .contact-container h2 {
+  font-size: 34px;
+  color: #212529;
+  font-weight: 400;
+}
+
+#contact .contact-container .contact-line {
+  width: 70px;
+  height: 3px;
+  background-color: #f4623a;
+  margin: 25px auto;
+}
+#contact .contact-container p {
+  color: #6c757d;
+  font-size: 18px;
+  max-width: 650px;
+  width: 100%;
+}
+#contact .contact-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+#contact .contact-container form input,
+textarea {
+  width: 80%;
+  padding: 18px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  font-size: 18px;
+}
+#contact .contact-container form button {
+  background-color: #f4623a;
+  opacity: 0.7;
+  padding: 18px;
+  width: 80%;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;  
+}
